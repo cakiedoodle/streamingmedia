@@ -4,6 +4,31 @@ html {
 body {
     width: 375px;
     margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    margin-top: 50px;
+    padding: 0 20px 20px;
+    background-color: red;
+}
+h1, header p {
+    margin: 0;
+}
+
+/* ---------- NAV BAR ---------- */
+
+nav {
+   position: absolute;
+   top: 0px;
+   background-color: greenyellow;
+   width: 63%;
+   height: 50px;
+}
+ul {
+    position: relative;
 }
 
 /* ---------- MENU CODE ---------- */
@@ -61,6 +86,9 @@ input:checked ~ label span:after {
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
 }
+
+/* ---------- MAIN ---------- */
+
 
 /* ---------- MEDIA QUERIES ----------- */
 
