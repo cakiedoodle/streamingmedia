@@ -6,16 +6,47 @@ body {
     margin: 0 auto;
     background-color: #ffffff;
 }
-
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #590242;
+}
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.more {
+    display: block;
+    text-align: center;
+    width: 30%;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #590242;
+}
+.more:hover {
+    background-color: #020659;
+}
 /* ---------- HEADER ---------- */
 
 header {
     margin-top: 50px;
     padding: 0 20px 20px;
-    background-color: red;
+    background: #020659;
+    background: linear-gradient(90deg, #000220 0%, #030a91 50%,#343de7 100%);;
+    color: #fff;
 }
 h1, header p {
     margin: 0;
+}
+h1 {
+    font-size: 22px;
+    color: #fff;
 }
 
 /* ---------- NAV BAR ---------- */
@@ -23,20 +54,44 @@ h1, header p {
 nav {
    position: absolute;
    top: 0px;
-   background-color: greenyellow;
-   width: 63%;
+   background-color:#343de7;
    height: 50px;
 }
 ul {
-    position: relative;
-}
-
-/* ---------- MENU CODE ---------- */
-
-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
+    width: 374px;
+}
+li  {
+    background-color: #343de7;
+    display: block;
+    padding: 10px 10px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    text-align: center;
+}
+li a {
+    width: 250px;
+    text-decoration: none;
+    font-size: 20px;
+}
+li:hover {
+    background-color: #590242;
+}
+.first {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    font-variant: small-caps;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    font-size: 22px;
+    padding: 0;
 }
 label {
     cursor: pointer;
@@ -89,18 +144,127 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 
 /* ---------- MAIN ---------- */
 
+h2 {
+    text-transform: uppercase;
+    padding-left: 30px;
+}
+.scroll > section {
+    margin: 10px;
+    position: relative;
+}
+#trends ::-webkit-scrollbar {
+    width: 15px;
+}
+#trends ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trends ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 8px;
+}
+#trends ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+.songinfo {
+    position: absolute; 
+    top: 251px;
+    color: #590242;
+    background-color: rgba(225, 225, 225, .75);
+    width: 100%;
+    height: 60px;
+}
+main h3 {
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+dl {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-left: 35px;
+    font-style: italic;
+}
+dt {
+    padding-right: 5px;
+    width:5px;
+}
+dd {
+    font-style: normal;
+}
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+    color: rgba(225, 225, 225, .5);
+}
+audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button {
+    background-color: #fff;
+    border-radius: 20px;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(225, 225, 225, .75);
+}
+
+/* ---------- ARTICLES ---------- */
+
+h3 {
+    color: #fff;
+}
+#yours .scroll {
+    background-color: #4d56ff;
+}
+#yours .scroll section {
+    background-color: #343de7;
+    padding: 10px;
+    text-align: center;
+}
+#yours .scroll section:hover, #curated .scroll section:hover {
+    background-color: #590242;
+}
+#yours ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#yours ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+#yours ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 8px;
+}
+#yours ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #590242;
+}
+#curated .scroll {
+    background-color: #030a91;
+}
+#curated .scroll section {
+    background-color: #020659;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    margin: 0 auto;
+    color: #590242;
+    text-align: center;
+    padding-bottom: 20px;
+}
 
 /* ---------- MEDIA QUERIES ----------- */
 
-@media screen and (min-width:834px) {
-    ul {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+/**
+    @media screen and (min-width:834px) {
+        ul {
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        label span, input {
+            display: none;
+        }
     }
-    label span, input {
-        display: none;
-    }
-}
+*/
