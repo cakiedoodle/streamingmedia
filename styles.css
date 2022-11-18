@@ -35,10 +35,10 @@ h1, h2, h3 {
 /* ---------- HEADER ---------- */
 
 header {
-    margin-top: 50px;
-    padding: 0 20px 20px;
+    margin-top: 70px;
+    padding: 0 30px 20px;
     background: #020659;
-    background: linear-gradient(90deg, #000220 0%, #030a91 50%,#343de7 100%);;
+    background: linear-gradient(90deg, #343de7 10%, #030a91 50%,#000220 100%);;
     color: #fff;
 }
 h1, header p {
@@ -55,7 +55,7 @@ nav {
    position: absolute;
    top: 0px;
    background-color:#343de7;
-   height: 50px;
+   height: 70px;
 }
 ul {
     margin: 0;
@@ -70,28 +70,31 @@ li  {
     background-color: #343de7;
     display: block;
     padding: 10px 10px;
-    border-right: 1px solid #f4f4f4;
     text-decoration: none;
     text-align: center;
+    
 }
 li a {
     width: 250px;
     text-decoration: none;
     font-size: 20px;
+    color: #fff;
+    
 }
 li:hover {
     background-color: #590242;
 }
-.first {
+li:first-child {
     position: absolute;
     top: 15px;
-    right: 60px;
+    right: 120px;
     font-variant: small-caps;
     text-decoration: none;
     font-weight: bold;
     color: #fff;
     font-size: 22px;
     padding: 0;
+    margin: 0;
 }
 label {
     cursor: pointer;
@@ -160,7 +163,7 @@ h2 {
 }
 #trends ::-webkit-scrollbar-thumb {
     background: #590242;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 #trends ::-webkit-scrollbar-thumb:hover {
     background: #020659;
@@ -207,7 +210,7 @@ audio::-webkit-media-controls-enclosure {
 
 /* ---------- ARTICLES ---------- */
 
-h3 {
+h3, p {
     color: #fff;
 }
 #yours .scroll {
@@ -229,10 +232,10 @@ h3 {
 }
 #yours ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
     background: #020659;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 #yours ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
-    background: #590242;
+    background: #fff;
 }
 #curated .scroll {
     background-color: #030a91;
@@ -254,17 +257,64 @@ footer {
 
 /* ---------- MEDIA QUERIES ----------- */
 
-/**
     @media screen and (min-width:834px) {
+        body {
+            width: 834px;
+        }
+        nav {
+            width: inherit;
+            background-color: #030a91;
+        }
         ul {
             overflow: visible;
-            position: absolute;
-            top: 0;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(5, 1fr);
+            top: 0;
         }
-        label span, input {
+        li, li:first-child {
+            background-color:#030a91;
+            display: block;
+            padding: 30px;
+            position: relative;
+            top: auto;
+            right: auto;
+            font-variant: none;
+            height: 10px;
+            justify-content: space-around;
+        }
+        label, label span, input {
             display: none;
         }
+        main {
+            padding-bottom: 50px;
+        }
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: inherit;
+        }    
+        article .scroll {   
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 600px;
+        }
+        .scroll img {
+            float: left;
+        }
+        #curated p {
+            margin-bottom: 0;
+            text-indent: 10px;
+        }
+        #yours ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+        width: 20px;
+        vertical-align: auto;
+        }
+        .more {
+        float: right;
+        }
+        article, footer {
+        clear: both;
+        }
     }
-*/
